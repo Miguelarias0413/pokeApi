@@ -1,7 +1,8 @@
 const containerPokemon = document.querySelector('.contenedor')
 const pokeUrl = "https://pokeapi.co/api/v2/pokemon?limit=100000&offset=0"
-const numPokemons = 1300;
+const numPokemons = 200;
 const barradecarga = document.querySelector('#carga--barra')
+const numPokemonCargados = document.querySelector('#carga--num')
 //peticion de todos los pokemones 
 fetch(pokeUrl)
  .then(request => request.json())
@@ -44,7 +45,6 @@ function printpokemon(pokemon){
 
     const parrafo = document.createElement('p')
     parrafo.textContent = 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt adipisci voluptates minus excepturi laboriosam dolores reprehenderit iste magnam quis, vero dolor perspiciatis! Ex facilis quibusdam suscipit, maxime repellat tenetur velit?'
-    console.log(pokemon)
     
     article.appendChild(imagen)
     article.appendChild(titulo)
@@ -64,7 +64,9 @@ function printpokemon(pokemon){
 
     if (fragment.children.length){
         cantidadElementos++;
+
         // porcentaje carga
+        numPokemonCargados.textContent = cantidadElementos;
         let porcentaje = (cantidadElementos/numPokemons)*100;
         barradecarga.style.width = `${porcentaje}%`
         const cargaContenedor = document.querySelector('.carga')

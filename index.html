@@ -8,6 +8,13 @@
   <title>Poke Arias</title>
   <link rel="stylesheet" href="style.css">
 </head>
+<section class="modalPokemon hidden">
+  <div class="modalContainer">
+    <h2 class="modalTitle">Titulo</h2>
+    <span id="modalCloseButton">X</span>
+  </div>
+
+</section>
 
 <body>
 
@@ -59,7 +66,16 @@
       <article class="card">
         <img src="images/chiky.jpg  " alt="">
         <h2>El chiky</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos, porro explicabo dolorum ullam molestiae voluptatibus quam laboriosam qui hic, ipsum incidunt beatae veritatis obcaecati atque eum animi corrupti neque accusamus?</p>
+        <div class="pillContainer">
+          <div class="pill">Mueco</div>
+          <div class="pill">feo</div>
+          <div class="pill fire">Arrugao</div>
+          
+          
+        </div>
+
+        <button type="button" class="pokeButton">Informacion</button>
+
       </article>
       
     </section>
@@ -73,7 +89,10 @@
 
   <script type="module" src="javascript/pokeAPIConsume.js"></script>
   <script src="javascript/buscador.js"></script>
+  <script type="module" src="javascript/modalInformation.js"></script>
   <script type="module" src="javascript/intersectionOb.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
 </body>
 
 </html>

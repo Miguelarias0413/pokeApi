@@ -13,7 +13,7 @@ export function observer(){
                 if (entry.target.firstElementChild.hasAttribute('src')){
                     return
                 }
-                console.log('se esta viendo el elemento')
+                // console.log('se esta viendo el elemento')
                 entry.target.firstElementChild.setAttribute('src', entry.target.firstElementChild.dataset.src)
                 observer.unobserve(entry.target)
                 entry.target.classList.add('fade-in')

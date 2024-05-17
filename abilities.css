@@ -1,0 +1,120 @@
+*{
+    padding: 0;
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+
+.pill{
+    display: inline-block;
+    text-align: center;
+    border: 1px solid rgba(0, 0, 0, 0.075);
+    margin: 2px 0;
+    padding: 2px 10px;
+    border-radius:20px;
+    font-weight: 700;
+    
+}
+.normal{
+    background-color: rgb(216, 216, 216);
+}
+.fighting{
+    background-color: rgb(255, 89, 0);
+    color: rgb(255, 255, 255);
+    border: 1px solid rgb(191, 191, 191);
+}
+.flying{
+    background-color: rgb(109, 250, 255);
+    color: rgb(118, 46, 170);
+    border: 1px solid rgb(54, 74, 203);
+}
+.poison{
+    background-color: rgb(13, 255, 0);
+    color: rgb(27, 95, 8);
+    border: 1px solid rgb(15, 66, 2);
+}
+.ground{
+    background-color: rgb(135, 51, 6);
+    color: rgb(255, 255, 255);
+}
+.rock{
+    background-color: rgb(213, 77, 4);
+    color: rgb(255, 255, 255);
+    border: 1px solid rgb(255, 255, 255);
+}
+.bug{
+    background-color: rgb(0, 255, 0);
+    color: rgb(0, 0, 0);
+    border: 1px solid rgb(0, 0, 0);
+
+}
+.ghost{
+    background-color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+    border: 1px solid rgb(255, 255, 255);
+
+}
+.steel{
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    border: 1px solid rgb(0, 0, 0);
+}
+.water{
+    background-color: rgb(0, 0, 255);
+    color: rgb(255, 255, 255);
+    border: 1px solid rgb(255, 255, 255);
+}
+.grass{
+    background-color: rgb(137, 228, 137);
+    color: rgb(5, 150, 0);
+    border: 1px solid rgb(228, 255, 228);
+}
+.electric{
+    background-color: rgb(255, 255, 0);
+    color: rgb(0, 0, 0);
+    border: 1px solid rgb(0, 0, 0);
+
+}
+.psychic{
+    background-color: rgb(255, 0, 255);
+    color: rgb(255, 255, 255);
+    border: 1px solid rgb(255, 255, 255);
+}
+.ice{
+    background-color: rgb(0, 255, 255);
+    color: rgb(0, 0, 0);
+    border: 1px solid rgb(0, 0, 0);
+}
+.dragon{
+    background-color: rgb(0, 0, 255);
+    color: rgb(255, 255, 255);
+    border: 1px solid rgb(255, 255, 255);
+}
+.dark{
+    background-color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+    border: 1px solid rgb(255, 255, 255);
+}
+.fairy{
+    background-color: rgb(255, 0, 255);
+    color: rgb(255, 255, 255);
+    border: 1px solid rgb(255, 255, 255);
+}
+.stellar{
+    background-color: rgb(140, 0, 255);
+    color: rgb(0, 0, 0);
+    border: 1px solid rgb(0, 0, 0);
+
+}
+.unknown{
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    border: 1px solid rgb(0, 0, 0);
+}
+.fire{
+    background-color: rgb(251, 104, 104);
+    color: rgb(255, 255, 255);
+    border: 1px solid rgb(255, 0, 0);
+}

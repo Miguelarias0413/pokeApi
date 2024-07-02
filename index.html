@@ -1,53 +1,148 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Poke Arias</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Poke Arias</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<section class="modalPokemon hidden">
-  <div class="modalContainer">
-    <h2 class="modalTitle">Titulo</h2>
-    <span id="modalCloseButton">X</span>
-  </div>
+  <section class="modal__loader">
+    <p>CARGANDO...</p>
+    <p>ESTO LLEVARA UN POCO DE TIEMPO</p>
+  </section>
+  <section class="modalPokemon hidden">
+    <div class="modalContainer">
+      <div class="modal__header">
+        <h2 class="modalTitle">Titulo</h2>
+        <span id="modalCloseButton">X</span>
+      </div>
+      <div class="modal__content">
+        <div class="modal__imgs">
+          <img src="images/chiky.jpg" alt="" />
+          <img src="images/chiky.jpg" alt="" />
+        </div>
+        <div class="modal__info">
+          <!-- <p class="modal__info--text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptates.</p> -->
+           
+          <div class="modal__info--container">
+            <div class="modal__info--container--item">
+              <p class="modal__info--container--item--title">ID</p>
+              <p class="modal__info--container--item--value" id="modal__idValue">000</p>
+            </div>
+            <div class="modal__info--container--item">
+              <p class="modal__info--container--item--title">Altura</p>
+              <p class="modal__info--container--item--value" id="modal__heightValue">1.5m</p>
+            </div>
+            <div class="modal__info--container--item">
+              <p class="modal__info--container--item--title">Peso</p>
+              <p class="modal__info--container--item--value" id="modal__weightValue">50kg</p>
+            </div>
+            <div class="modal__info--container--item modal__info--container--abililities">
+              <p class="modal__info--container--item--title abilities--title">Habilidades</p>
+              <p class="modal__info--container--item--value modal__abilitiesValue">Quemadura</p>
+            </div>
+          </div>
 
-</section>
+          <!-- aqui acaba uno y empieza la otra section -->
+          <div class="modal__info--container modal__info--container--second">
+            <div class="modal__info--container--item">
+              <p class="modal__info--container--item--title">HP</p>
+              <p class="modal__info--container--item--value modal__info--container-item--stat-value" >000</p>
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12Z" />
+              </svg>
+            </div>
+            <div class="modal__info--container--item">
+              <p class="modal__info--container--item--title">Attack</p>
+              <p class="modal__info--container--item--value modal__info--container-item--stat-value" >000</p>
+              <svg width="800px" height="800px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M19 1.48416e-05L23 0C23.2652 -9.53668e-07 23.5195 0.105355 23.7071 0.292891C23.8946 0.480426 24 0.73478 24 0.999997L24 5.00001C24 5.26523 23.8946 5.51958 23.7071 5.70712L11.9142 17.5L13.7071 19.2929C14.0976 19.6834 14.0976 20.3166 13.7071 20.7071C13.3166 21.0977 12.6834 21.0977 12.2929 20.7071L9.79289 18.2071L9.46376 17.878L5.9999 20.9955C6.00096 21.7635 5.70873 22.534 5.12132 23.1214C3.94975 24.293 2.05025 24.293 0.87868 23.1214C-0.292893 21.9498 -0.292893 20.0503 0.87868 18.8787C1.46607 18.2913 2.23647 17.9991 3.00451 18.0002L6.12202 14.5363L5.79287 14.2071L3.29289 11.7071C2.90237 11.3166 2.90237 10.6834 3.29289 10.2929C3.68342 9.90239 4.31658 9.90239 4.70711 10.2929L6.49998 12.0858L18.2929 0.292907C18.4804 0.105372 18.7348 1.57952e-05 19 1.48416e-05ZM7.91419 13.5L8.2071 13.7929L10.2071 15.7929L10.5 16.0858L22 4.5858L22 2L19.4142 2.00001L7.91419 13.5ZM7.53819 15.9524L5.00435 18.7678C5.0441 18.8035 5.08311 18.8405 5.12132 18.8787C5.15952 18.9169 5.19648 18.9559 5.23221 18.9957L8.04759 16.4618L7.53819 15.9524ZM3.20676 20.0214C2.88445 19.954 2.54009 20.0458 2.29289 20.293C1.90237 20.6835 1.90237 21.3166 2.29289 21.7072C2.68342 22.0977 3.31658 22.0977 3.70711 21.7072C3.95431 21.46 4.0461 21.1156 3.97862 20.7933C3.94032 20.6103 3.85075 20.4366 3.70711 20.293C3.56346 20.1493 3.3897 20.0597 3.20676 20.0214Z" fill="#000000"/>
+              </svg>
+            </div>
+            <div class="modal__info--container--item">
+              <p class="modal__info--container--item--title">Deffense</p>
+              <p class="modal__info--container--item--value modal__info--container-item--stat-value" >000</p>
+              <svg width="800px" height="800px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M11.302 21.6149C11.5234 21.744 11.6341 21.8086 11.7903 21.8421C11.9116 21.8681 12.0884 21.8681 12.2097 21.8421C12.3659 21.8086 12.4766 21.744 12.698 21.6149C14.646 20.4784 20 16.9084 20 12V6.6C20 6.04207 20 5.7631 19.8926 5.55048C19.7974 5.36198 19.6487 5.21152 19.4613 5.11409C19.25 5.00419 18.9663 5.00084 18.3988 4.99413C15.4272 4.95899 13.7136 4.71361 12 3C10.2864 4.71361 8.57279 4.95899 5.6012 4.99413C5.03373 5.00084 4.74999 5.00419 4.53865 5.11409C4.35129 5.21152 4.20259 5.36198 4.10739 5.55048C4 5.7631 4 6.04207 4 6.6V12C4 16.9084 9.35396 20.4784 11.302 21.6149Z" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <div class="modal__info--container--item">
+              <p class="modal__info--container--item--title">Special Attack</p>
+              <p class="modal__info--container--item--value modal__info--container-item--stat-value" >000</p>
+              <svg fill="#000000" height="800px" width="800px" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
+	 viewBox="0 0 290.226 290.226" xml:space="preserve">
+<g>
+	<path d="M63.951,243.575c-1.945-3.578-4.401-6.907-7.363-9.869c-3.106-3.102-6.626-5.633-10.4-7.63
+		c-4.51-2.387-0.945-7.5-0.945-7.5c4.616-7.023,8.825-14.079,12.305-20.226l-23.363-23.344H11.504c-4.362,0-7.898-3.539-7.898-7.902
+		c0-4.361,3.536-7.9,7.898-7.9h25.947c2.1,0,4.107,0.832,5.588,2.312l85.379,85.291c1.483,1.483,2.315,3.495,2.315,5.589v26.073
+		c0,4.365-3.537,7.897-7.9,7.897c-4.367,0-7.904-3.531-7.904-7.897v-22.798l-23.27-23.24c-6.281,3.707-13.582,8.252-20.816,13.25
+		C70.842,245.679,66.698,248.629,63.951,243.575z"/>
+	<path d="M26.61,237.102c-7.106,0-13.784,2.764-18.812,7.784c-5.019,5.015-7.782,11.686-7.782,18.778
+		c0,7.097,2.764,13.762,7.782,18.776c5.027,5.016,11.706,7.783,18.812,7.785c7.102,0,13.781-2.77,18.804-7.785
+		c5.023-5.015,7.79-11.682,7.79-18.776c0-7.093-2.768-13.764-7.79-18.778C40.392,239.866,33.712,237.102,26.61,237.102z"/>
+	<path d="M100.985,182.318c-3.502,3.499-9.232,3.499-12.734,0.001l-8.81-8.801c-3.502-3.498-3.502-9.223,0-12.721L229.832,10.564
+		c3.502-3.498,10.401-6.727,15.33-7.175l36.862-3.352c4.93-0.448,8.596,3.218,8.148,8.148l-3.346,36.791
+		c-0.448,4.93-3.68,11.825-7.182,15.324l-150.4,150.251c-3.502,3.498-9.232,3.498-12.734,0l-8.822-8.813
+		c-3.502-3.498-3.502-9.223,0-12.722L233.608,63.213c1.854-1.848,1.856-4.852,0.003-6.702c-1.848-1.853-4.853-1.853-6.709-0.002
+		L100.985,182.318z"/>
+</g>
+</svg>
+            </div>
+            <div class="modal__info--container--item">
+              <p class="modal__info--container--item--title">Special Deffense</p>
+              <p class="modal__info--container--item--value modal__info--container-item--stat-value" >000</p>
+              <svg fill="#000000" width="800px" height="800px" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><path d="M26.996 12.898c-.064-2.207-1.084-4.021-2.527-5.13-1.856-1.428-4.415-1.69-6.542-.132-.702.516-1.359 1.23-1.927 2.168-.568-.938-1.224-1.652-1.927-2.167-2.127-1.559-4.685-1.297-6.542.132-1.444 1.109-2.463 2.923-2.527 5.13-.035 1.172.145 2.48.788 3.803 1.01 2.077 5.755 6.695 10.171 10.683l.035.038.002-.002.002.002.036-.038c4.415-3.987 9.159-8.605 10.17-10.683.644-1.323.822-2.632.788-3.804z"/>
+              </svg>
+            </div>
+            <div class="modal__info--container--item">
+              <p class="modal__info--container--item--title">Speed</p>
+              <p class="modal__info--container--item--value modal__info--container-item--stat-value" >000</p>
+              <svg width="800px" height="800px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M6.34315 17.6569C5.22433 16.538 4.4624 15.1126 4.15372 13.5607C3.84504 12.0089 4.00346 10.4003 4.60896 8.93853C5.21446 7.47672 6.23984 6.22729 7.55544 5.34824C8.87103 4.46919 10.4177 4 12 4C13.5823 4 15.129 4.46919 16.4446 5.34824C17.7602 6.22729 18.7855 7.47672 19.391 8.93853C19.9965 10.4003 20.155 12.0089 19.8463 13.5607C19.5376 15.1126 18.7757 16.538 17.6569 17.6569" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M12 12L16 10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+          </div>
+
+          <div class="modal__info--types">
+            <div class="pill fire">pilldora</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
 <body>
+    <header>
+      <div class="logo">
+        <a href="">POKE/ARIAS</a>
+      </div>
+      <nav>
+        <ul class="lista_desordenada">
+          <li>
+            <a href="#">About us</a>
+            <ul class="dropdown_menu">
+              <li><a href="#">Link 1</a></li>
+              <li><a href="#">Link 2</a></li>
+              <li><a href="#">Link 3</a></li>
+              <li><a href="#">Link 4</a></li>
+              <li><a href="#">Link 5</a></li>
+            </ul>
+          </li>
+          <li><a href="#">What is this?</a></li>
+        </ul>
+      </nav>
+    </header>
 
-  <header>
-    <div class="logo">
-      <a href="">POKE/ARIAS</a>
-    </div>
-    <nav>
-      <ul class="lista_desordenada">
-        <li>
-          <a href="#">About us</a>
-          <ul class="dropdown_menu">
-            <li><a href="#">Link 1</a></li>
-            <li><a href="#">Link 2</a></li>
-            <li><a href="#">Link 3</a></li>
-            <li><a href="#">Link 4</a></li>
-            <li><a href="#">Link 5</a></li>
-          </ul>
-        </li>
-        <li><a href="#">What is this?</a></li>
-        <li><a href="#">Select language</a></li>
-      </ul>
-    </nav>
+    <main>
+      <div class="contenedor__buscador">
+        <input type="text" placeholder="BUSCA TU POKEMON" id="buscador" />
+        <button>></button>
+      </div>
 
-  </header>
-
-  <main>
-    <div class="contenedor__buscador">
-      <input type="text" placeholder="BUSCA TU POKEMON" id="buscador"> 
-     <button>></button>
-    </div>
-
-    <!-- <div class="carga">
+      <!-- <div class="carga">
       <div class="circulo--carga"> </div>
 
       <div class="cantidad--carga">
@@ -61,38 +156,123 @@
 
     </div> -->
 
+      <section class="contenedor">
+        
+        <article class="card hidden">
+          <img src="images/chiky.jpg  " alt="" />
+          <h2>El chiky</h2>
+          <div class="pillContainer">
+            <div class="pill">Mueco</div>
+            <div class="pill">feo</div>
+            <div class="pill fire">Arrugao</div>
+          </div>
 
-    <section class="contenedor">
-      <article class="card">
-        <img src="images/chiky.jpg  " alt="">
-        <h2>El chiky</h2>
-        <div class="pillContainer">
-          <div class="pill">Mueco</div>
-          <div class="pill">feo</div>
-          <div class="pill fire">Arrugao</div>
-          
-          
-        </div>
+          <button type="button" class="pokeButton">MAS INFORMACION</button>
+        </article>
 
-        <button type="button" class="pokeButton">Informacion</button>
+        <article class="card--loading">
+          <img src=" " alt="" />
+          <h2>Lorem ipsum</h2>
+          <div class="pillContainer">
+            <div class="pill grass">Lorem</div>
+            <div class="pill">Lorem</div>
+          </div>
 
-      </article>
-      
-    </section>
+          <button type="button" class="pokeButton">Informacion</button>
+        </article>
 
 
-  </main>
+        <article class="card--loading">
+          <img src=" " alt="" />
+          <h2>Lorem ipsum</h2>
+          <div class="pillContainer">
+            <div class="pill grass">Lorem</div>
+            <div class="pill">Lorem</div>
+          </div>
 
-  <footer>
+          <button type="button" class="pokeButton">Informacion</button>
+        </article><article class="card--loading">
+          <img src=" " alt="" />
+          <h2>Lorem ipsum</h2>
+          <div class="pillContainer">
+            <div class="pill grass">Lorem</div>
+            <div class="pill">Lorem</div>
+          </div>
 
-  </footer>
+          <button type="button" class="pokeButton">Informacion</button>
+        </article><article class="card--loading">
+          <img src=" " alt="" />
+          <h2>Lorem ipsum</h2>
+          <div class="pillContainer">
+            <div class="pill grass">Lorem</div>
+            <div class="pill">Lorem</div>
+          </div>
 
-  <script type="module" src="javascript/pokeAPIConsume.js"></script>
-  <script src="javascript/buscador.js"></script>
-  <script type="module" src="javascript/modalInformation.js"></script>
-  <script type="module" src="javascript/intersectionOb.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+          <button type="button" class="pokeButton">Informacion</button>
+        </article><article class="card--loading">
+          <img src=" " alt="" />
+          <h2>Lorem ipsum</h2>
+          <div class="pillContainer">
+            <div class="pill grass">Lorem</div>
+            <div class="pill">Lorem</div>
+          </div>
 
-</body>
+          <button type="button" class="pokeButton">Informacion</button>
+        </article><article class="card--loading">
+          <img src=" " alt="" />
+          <h2>Lorem ipsum</h2>
+          <div class="pillContainer">
+            <div class="pill grass">Lorem</div>
+            <div class="pill">Lorem</div>
+          </div>
 
+          <button type="button" class="pokeButton">Informacion</button>
+        </article><article class="card--loading">
+          <img src=" " alt="" />
+          <h2>Lorem ipsum</h2>
+          <div class="pillContainer">
+            <div class="pill grass">Lorem</div>
+            <div class="pill">Lorem</div>
+          </div>
+
+          <button type="button" class="pokeButton">Informacion</button>
+        </article><article class="card--loading">
+          <img src=" " alt="" />
+          <h2>Lorem ipsum</h2>
+          <div class="pillContainer">
+            <div class="pill grass">Lorem</div>
+            <div class="pill">Lorem</div>
+          </div>
+
+          <button type="button" class="pokeButton">Informacion</button>
+        </article><article class="card--loading">
+          <img src=" " alt="" />
+          <h2>Lorem ipsum</h2>
+          <div class="pillContainer">
+            <div class="pill grass">Lorem</div>
+            <div class="pill">Lorem</div>
+          </div>
+
+          <button type="button" class="pokeButton">Informacion</button>
+        </article><article class="card--loading">
+          <img src=" " alt="" />
+          <h2>Lorem ipsum</h2>
+          <div class="pillContainer">
+            <div class="pill grass">Lorem</div>
+            <div class="pill">Lorem</div>
+          </div>
+
+          <button type="button" class="pokeButton">Informacion</button>
+        </article>
+      </section>
+    </main>
+
+    <footer></footer>
+
+    <script type="module" src="javascript/pokeAPIConsume.js"></script>
+    <script src="javascript/buscador.js"></script>
+    <script type="module" src="javascript/modalInformation.js"></script>
+    <script type="module" src="javascript/intersectionOb.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  </body>
 </html>
